@@ -1,0 +1,74 @@
+:root {
+  --background: 270 30% 98%;
+  --foreground: 270 10% 10%;
+  --card: 270 30% 98%;
+  --card-foreground: 270 10% 10%;
+  --popover: 270 30% 98%;
+  --popover-foreground: 270 10% 10%;
+  --primary: 270 70% 40%;
+  --primary-foreground: 0 0% 100%;
+  --secondary: 270 40% 85%;
+  --secondary-foreground: 270 10% 10%;
+  --muted: 270 30% 90%;
+  --muted-foreground: 270 10% 40%;
+  --accent: 270 40% 80%;
+  --accent-foreground: 270 10% 10%;
+  --destructive: 0 100% 50%;
+  --destructive-foreground: 0 0% 100%;
+  --border: 270 20% 85%;
+  --input: 270 20% 85%;
+  --ring: 270 70% 40%;
+  --radius: 0.5rem;
+
+  --chart-1: 270 70% 40%;
+  --chart-2: 270 60% 50%;
+  --chart-3: 270 50% 60%;
+  --chart-4: 270 40% 70%;
+  --chart-5: 270 30% 80%;
+
+  --sidebar-background: 270 30% 98%;
+  --sidebar-foreground: 270 10% 10%;
+  --sidebar-primary: 270 70% 40%;
+  --sidebar-primary-foreground: 0 0% 100%;
+  --sidebar-accent: 270 30% 85%;
+  --sidebar-accent-foreground: 270 10% 10%;
+  --sidebar-border: 270 20% 85%;
+  --sidebar-ring: 270 70% 40%;
+}
+
+.dark {
+  --background: 270 30% 5%;
+  --foreground: 270 10% 95%;
+  --card: 270 30% 5%;
+  --card-foreground: 270 10% 95%;
+  --popover: 270 30% 5%;
+  --popover-foreground: 270 10% 95%;
+  --primary: 270 70% 60%;
+  --primary-foreground: 0 0% 100%;
+  --secondary: 270 40% 20%;
+  --secondary-foreground: 270 10% 95%;
+  --muted: 270 30% 20%;
+  --muted-foreground: 270 10% 70%;
+  --accent: 270 40% 25%;
+  --accent-foreground: 270 10% 95%;
+  --destructive: 0 100% 50%;
+  --destructive-foreground: 0 0% 100%;
+  --border: 270 20% 20%;
+  --input: 270 20% 20%;
+  --ring: 270 70% 60%;
+
+  --chart-1: 270 70% 60%;
+  --chart-2: 270 60% 50%;
+  --chart-3: 270 50% 40%;
+  --chart-4: 270 40% 30%;
+  --chart-5: 270 30% 20%;
+
+  --sidebar-background: 270 30% 5%;
+  --sidebar-foreground: 270 10% 95%;
+  --sidebar-primary: 270 70% 60%;
+  --sidebar-primary-foreground: 0 0% 100%;
+  --sidebar-accent: 270 30% 20%;
+  --sidebar-accent-foreground: 270 10% 95%;
+  --sidebar-border: 270 20% 20%;
+  --sidebar-ring: 270 70% 60%;
+}
