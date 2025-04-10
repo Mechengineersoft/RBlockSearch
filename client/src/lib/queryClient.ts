@@ -51,21 +51,30 @@ export const queryClient = new QueryClient({
       queryFn: getQueryFn({ on401: "throw" }),
       refetchInterval: false,
       refetchOnWindowFocus: true,
-      staleTime: 60000, // 1 minute in milliseconds
-      cacheTime: 60000, // Clear cache after 1 minute
-      retry: false,
+      staleTime: 30000, // 30 seconds in milliseconds
+      cacheTime: 30000, // Clear cache after 30 seconds
+      retry: 1, // Allow one retry
     },
     mutations: {
-      retry: false,
+      retry: 1,
     },
   },
 });
 
-// Clear cache when window gains focus after being hidden
+// Clear cache when window gains focus after being hidden or in standalone mode
 if (typeof window !== 'undefined') {
+  // Handle visibility change
   document.addEventListener('visibilitychange', () => {
     if (document.visibilityState === 'visible') {
       queryClient.clear();
     }
   });
+
+  // Handle standalone mode
+  if (window.matchMedia('(display-mode: standalone)').matches) {
+    // Invalidate cache more frequently in standalone mode
+    setInterval(() => {
+      queryClient.invalidateQueries();
+    }, 15000); // Every 15 seconds
+  }
 }

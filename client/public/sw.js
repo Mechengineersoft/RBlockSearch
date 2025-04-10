@@ -10,17 +10,6 @@ const urlsToCache = [
   '/src/app.tsx'
 ];
 
-// Handle standalone mode
-self.addEventListener('fetch', event => {
-  if (event.request.mode === 'navigate') {
-    event.respondWith(
-      fetch(event.request)
-        .catch(() => caches.match('/'))
-    );
-    return;
-  }
-});
-
 self.addEventListener('install', (event) => {
   event.waitUntil(
     caches.open(CACHE_NAME)
@@ -29,6 +18,22 @@ self.addEventListener('install', (event) => {
 });
 
 self.addEventListener('fetch', (event) => {
+  // Skip caching for API requests
+  if (event.request.url.includes('/api/')) {
+    event.respondWith(fetch(event.request));
+    return;
+  }
+
+  // Handle navigation requests (including standalone mode)
+  if (event.request.mode === 'navigate') {
+    event.respondWith(
+      fetch(event.request)
+        .catch(() => caches.match('/'))
+    );
+    return;
+  }
+
+  // Handle all other requests with cache-first strategy
   event.respondWith(
     caches.match(event.request)
       .then((response) => {
