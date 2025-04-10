@@ -1,11 +1,25 @@
-const CACHE_NAME = 'sheet-search-v1';
+const CACHE_NAME = 'sheet-search-v2';
 const urlsToCache = [
   '/',
   '/index.html',
   '/manifest.json',
+  '/granite-block.svg',
   '/icon-192x192.png',
-  '/icon-512x512.png'
+  '/icon-512x512.png',
+  '/src/main.tsx',
+  '/src/app.tsx'
 ];
+
+// Handle standalone mode
+self.addEventListener('fetch', event => {
+  if (event.request.mode === 'navigate') {
+    event.respondWith(
+      fetch(event.request)
+        .catch(() => caches.match('/'))
+    );
+    return;
+  }
+});
 
 self.addEventListener('install', (event) => {
   event.waitUntil(

@@ -4,9 +4,17 @@
   "description": "Search and manage sheet data efficiently",
   "start_url": "/",
   "display": "standalone",
+  "orientation": "any",
   "background_color": "#ffffff",
   "theme_color": "#166534",
+  "prefer_related_applications": false,
   "icons": [
+    {
+      "src": "/granite-block.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any maskable"
+    },
     {
       "src": "/icon-192x192.png",
       "sizes": "192x192",
