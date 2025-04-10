@@ -50,8 +50,9 @@ export const queryClient = new QueryClient({
     queries: {
       queryFn: getQueryFn({ on401: "throw" }),
       refetchInterval: false,
-      refetchOnWindowFocus: false,
+      refetchOnWindowFocus: true,
       staleTime: 60000, // 1 minute in milliseconds
+      cacheTime: 60000, // Clear cache after 1 minute
       retry: false,
     },
     mutations: {
@@ -59,3 +60,12 @@ export const queryClient = new QueryClient({
     },
   },
 });
+
+// Clear cache when window gains focus after being hidden
+if (typeof window !== 'undefined') {
+  document.addEventListener('visibilitychange', () => {
+    if (document.visibilityState === 'visible') {
+      queryClient.clear();
+    }
+  });
+}
