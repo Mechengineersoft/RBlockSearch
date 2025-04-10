@@ -174,7 +174,7 @@ export default function HomePage() {
     <div className="min-h-screen bg-background flex flex-col">
       <header className="border-b sticky top-0 bg-background z-10">
         <div className="container mx-auto px-0 h-12 flex items-center justify-between">
-          <h1 className="text-xl font-bold pl-2">Sheet Search</h1>
+          <h1 className="text-xl font-bold pl-2">Block Search</h1>
           <div className="flex items-center gap-2">
             <Button
               variant="ghost"

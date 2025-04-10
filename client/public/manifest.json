@@ -1,6 +1,6 @@
 {
-  "name": "Sheet Search",
-  "short_name": "SheetSearch",
+  "name": "Block Search",
+  "short_name": "BlockSearch",
   "description": "Search and manage sheet data efficiently",
   "start_url": "/",
   "display": "standalone",

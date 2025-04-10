@@ -64,7 +64,7 @@ export default function AuthPage() {
       <div className="flex items-center justify-center p-8">
         <Card className="w-full max-w-md">
           <CardHeader>
-            <CardTitle>Welcome to Sheet Search</CardTitle>
+            <CardTitle>Welcome to Block Search</CardTitle>
           </CardHeader>
           <CardContent>
             <Tabs defaultValue="login">
@@ -172,7 +172,7 @@ export default function AuthPage() {
       </div>
       <div className="bg-gray-100 flex items-center justify-center p-8">
         <div className="text-left max-w-md">
-          <h2 className="text-3xl font-bold mb-4">Sheet Search Portal</h2>
+          <h2 className="text-3xl font-bold mb-4">Block Search Portal</h2>
           <p className="text-lg text-gray-700">
             Access and search through your Google Sheets data efficiently. Login or register to get started with our powerful search features.
           </p>

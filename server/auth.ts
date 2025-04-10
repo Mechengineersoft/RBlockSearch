@@ -19,7 +19,7 @@ redisClient.connect().catch(console.error);
 
 const redisStore = new RedisStore({
   client: redisClient,
-  prefix: "sheetsearch:",
+  prefix: "blocksearch:",
 });
 
 const transporter = nodemailer.createTransport({
@@ -125,7 +125,7 @@ export function setupAuth(app: Express) {
 
     try {
       await transporter.sendMail({
-        from: `"Sheet Search" <${process.env.EMAIL_USER || "your-email@gmail.com"}>`,
+        from: `"Block Search" <${process.env.EMAIL_USER || "your-email@gmail.com"}>`,
         to: req.body.email,
         subject: 'Email Verification OTP',
         text: `Your OTP for email verification is: ${otp}`,
@@ -197,7 +197,7 @@ export function setupAuth(app: Express) {
 
     try {
       await transporter.sendMail({
-        from: `"Sheet Search" <${process.env.EMAIL_USER || "your-email@gmail.com"}>`,
+        from: `"Block Search" <${process.env.EMAIL_USER || "your-email@gmail.com"}>`,
         to: user.email,
         subject: 'Password Reset OTP',
         text: `Your OTP for password reset is: ${otp}`,
@@ -221,7 +221,7 @@ export function setupAuth(app: Express) {
 
     try {
       await transporter.sendMail({
-        from: `"Sheet Search" <${process.env.EMAIL_USER || "your-email@gmail.com"}>`,
+        from: `"Block Search" <${process.env.EMAIL_USER || "your-email@gmail.com"}>`,
         to: user.email,
         subject: 'Your Username Recovery',
         text: `Your username is: ${user.username}`,

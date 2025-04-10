@@ -1,6 +1,6 @@
 services:
   - type: web
-    name: google-sheet-search-portal-api
+    name: google-block-search-portal-api
     env: node
     buildCommand: npm install && npx vite build && npx esbuild server/index.ts --platform=node --packages=external --bundle --format=esm --outdir=dist
     startCommand: npm start

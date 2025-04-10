@@ -1,4 +1,4 @@
-const CACHE_NAME = 'sheet-search-v2';
+const CACHE_NAME = 'block-search-v2';
 const urlsToCache = [
   '/',
   '/index.html',
